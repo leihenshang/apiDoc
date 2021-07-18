@@ -49,12 +49,6 @@ export default {
         route: "/detail/" + this.$route.params.projectId + "/projectDoc",
         icon: "el-icon-reading",
       },
-
-      {
-        title: "BUG管理",
-        route: "/detail/" + this.$route.params.projectId + "/bugHome",
-        icon: "el-icon-sort",
-      },
     ];
 
     let mmanagerMenu = [

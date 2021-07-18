@@ -57,13 +57,6 @@ const router = new VueRouter({
               props: true,
             },
             {
-              path: "bugHome",
-              name: "bugHome",
-              component: resolve => require(['@/view/project/bug'], resolve),
-              meta: { requiresAuth: true },
-              props: true,
-            },
-            {
               path: "members",
               name: "members",
               component: resolve => require(['@/view/project/members'], resolve),

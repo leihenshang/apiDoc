@@ -49,18 +49,20 @@ func main() {
 		panic("链接redis失败")
 	}
 
+	defer Redis.Close()
+
 	mysqlPort := strconv.Itoa(Conf.Mysql.Port)
 	//初始化数据库
 	dsn := Conf.Mysql.User + ":" + Conf.Mysql.Password + "@tcp(" + Conf.Mysql.Host + ":" + mysqlPort + ")/" +
 		Conf.Mysql.DbName + "?charset=" + Conf.Mysql.Charset + "&parseTime=True&loc=Local"
-	MyDb, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
+	Db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println(err.Error())
 		fmt.Println(dsn)
 		panic("初始化mysql失败")
 	}
 
-	fmt.Println(MyDb.Config)
+	fmt.Println(Db.Config)
 
 	//打印信息
 	fmt.Println("开启api-doc-go重构第一个版本")

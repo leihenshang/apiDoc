@@ -25,3 +25,13 @@ root
     config.json.example -配置文件示例文件
 ```
 
+## 热重载
+
+`可以使用air提高开发效率，它可以在你修改了项目文件时自动帮你重启项目。` 
+
+### 要点
+ - 首先要在开发环境中安装air
+ - 将 `air_example.toml` 改为 `.air.toml`
+ - 然后 执行  `air`  或 `air -c .air.toml`
+
+[查看air使用说明](https://github.com/cosmtrek/air)

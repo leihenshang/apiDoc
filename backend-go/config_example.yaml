@@ -1,22 +1,23 @@
 app:
-    host: "localhost"
-    port: 2020
-    name: "apiDoc-go"
+    host: localhost
+    port: 2021
+    name: apiDoc-go
+    runMode: production   # dev-开发模式 production-生产(正式)模式
 
 mysql:
-    host: "127.0.0.1"
+    host: 127.0.0.1
     port: 3306
-    user: "root"
-    password: "root"
-    charset: "utf8mb4"
-    dbName: "api-doc"
+    user: root
+    password: root
+    charset: utf8mb4
+    dbName: api-doc
 
 log:
-    path: "runtime/log"
+    path: runtime/log
 
 redis:
-    host: "127.0.0.1"
+    host: 127.0.0.1
     port: 6379
-    user: ""
-    password: ""
+    user: 
+    password: 
     dbId: 0

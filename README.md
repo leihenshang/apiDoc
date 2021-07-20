@@ -4,35 +4,33 @@
 ## 概览
 api-doc 是一个轻(jian)量(lou)的api接口文档和项目文档记录程序。支持markdown文档,方便了前后端开发人员对于接口文档和项目文档的查看、使用。
 
+- github:https://github.com/leihenshang/apiDoc
+- gitee:https://gitee.com/leihenshang/apiDoc
+
 ## 鸣谢
 
 
  <img src="./jetbrains.png" width = "200" height = "218.6" alt="图片名称" align=center />
 
 
- 感谢[ JetBrains ](https://www.jetbrains.com/?from=apiDoc)提供的IDE支持！
+ 感谢[ JetBrains ](https://www.jetbrains.com/?from=apiDoc)提供的IDE支持
 
-### 结构
+## 文件结构
 该项目为前后台分离项目
 - front 前端
 - backend 后端
-
-这两个文件夹下还各包含一个README.MD，为各自的项目说明。
 
 ## 技术栈
   - 后端采用 `golang` 的 `gin` 框架提供接口支持
   - 前端暂时采用 vue2.0
   - 数据库继续使用 mysql5.7
-### 运行
+## 运行
 1. 进入front（前端)文件夹,首先执行yarn install安装依赖,接着执行yarn serve
 2. 进入backend（后端)文件夹,执行 go run main
 
-### 数据库初始化
+## 数据库初始化
 - 在mysql中执行 sql/mysql.sql 
 
-## 仓库地址
-- github:https://github.com/leihenshang/apiDoc
-- gitee:https://gitee.com/leihenshang/apiDoc
 
 ## 初始化超级管理员
 
@@ -40,7 +38,7 @@ api-doc 是一个轻(jian)量(lou)的api接口文档和项目文档记录程序�
 超级管理员忘记密码 php yii init/user true
 
 
-## 项目图片
+## 预览
 ![登录](https://images.gitee.com/uploads/images/2020/0531/222925_7c0239aa_1719135.png "start.png")
 ![api概述](https://images.gitee.com/uploads/images/2020/0531/222953_cf831496_1719135.png "detail.png")
 ![api详情](https://images.gitee.com/uploads/images/2020/0531/223008_68e4cfa8_1719135.png "api-detail.png")

@@ -2,7 +2,7 @@ app:
     host: localhost
     port: 2021
     name: apiDoc-go
-    runMode: production   # dev-开发模式 production-生产(正式)模式
+    runMode: release   # dev-开发模式 release-生产(正式)模式
 
 mysql:
     host: 127.0.0.1

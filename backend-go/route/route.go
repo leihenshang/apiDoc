@@ -1,7 +1,7 @@
 package route
 
 import (
-	"fast-duck/goApiDoc/app/controller"
+	"fast-duck/goApiDoc/controller"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

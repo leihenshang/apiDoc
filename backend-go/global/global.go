@@ -1,7 +1,7 @@
 package global
 
 import (
-	"fast-duck/goApiDoc/config"
+	"fastduck/apidoc/config"
 	"fmt"
 	"strconv"
 

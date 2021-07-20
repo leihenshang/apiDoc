@@ -1,4 +1,4 @@
-module fast-duck/goApiDoc
+module fastduck/apidoc
 
 go 1.16
 

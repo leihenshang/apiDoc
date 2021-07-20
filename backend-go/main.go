@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fast-duck/goApiDoc/global"
-	_ "fast-duck/goApiDoc/global"
-	"fast-duck/goApiDoc/route"
+	"fastduck/apidoc/global"
+	_ "fastduck/apidoc/global"
+	"fastduck/apidoc/route"
 	"fmt"
 	"net/http"
 	"strconv"

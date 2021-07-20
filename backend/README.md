@@ -1,92 +1,37 @@
-#### 概要
-这个项目使用YII2框架
+# fast-duck/apiDoc golang 版
 
-目录结构
--------------------
+## 概述
 
-      assets/             contains assets definition
-      commands/           contains console commands (controllers)
-      config/             contains application configurations
-      controllers/        contains Web controller classes
-      mail/               contains view files for e-mails
-      models/             contains model classes
-      runtime/            contains files generated during runtime
-      tests/              contains various tests for the basic application
-      vendor/             contains dependent 3rd-party packages
-      views/              contains view files for the Web application
-      web/                contains the entry script and Web resources
+这个项目的目的是使用 `golang` 替换php提供的api，用于练习web项目框架封装。
+采用前后端分离的方式，这里提供了api接口。
 
+## 使用到的库
 
+- http服务器 gin
+- orm提供方 gorm
+- 配置文件
+- 日志处理
+- 缓存处理
 
-需求
-------------
-
-PHP>=7.2
-
-
-安装依赖
-------------
+## 目录说明
 
 ```
-composer istall -vv
+root
+    app     -项目代码
+    config  -配置文件
+    runtime -运行时的产生的文件
+    sql     -数据库建立的sql
+    config.json -配置文件
+    config.json.example -配置文件示例文件
 ```
 
-配置
--------------
+## 热重载
 
-### 数据库
+`可以使用air提高开发效率，它可以在你修改了项目文件时自动帮你重启项目。` 
 
-Edit the file `config/db.php` with real data, for example:
+### 要点
+ - 首先要在开发环境中安装air
+ - 将 `air_example.toml` 改为 `.air.toml`
+ - 然后 执行  `air`  或 `air -c .air.toml`
 
-```php
-return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '1234',
-    'charset' => 'utf8',
-];
-```
-
-接口返回参数规定 
--------------
-
-返回的数据是一个json对象，基本数据结构必含 data,code,msg
-- data 数据是数据对象
-    - `列表返回` `{"count":20,"items":[ itme1... , item2.... , ... ]}`
-- msg 消息
-- code 返回状态代码
-     - 200 成功
-     - 14  参数错误
-     - 34  用户验证相关错误 
-     - 22  数据相关错误 
-
-成功
-```json
-{
- "data":null,
- "msg":"success",
- "code":200
-}
-```
-失败
-```json
-{
- "data":null,
- "msg":"failed",
- "code":14
-}
-```
-
-权限说明
--------
-
-系统内有一个超级管理，可以执行所有一切操作，它就是系统内的上帝，玉皇大帝。。。。
-所以密码很重要，修改一个不容易记住的密码
-其次就是普通管理员，除了超级管理员就是他最大了，他可以管理各个项目内的人员等，除了不能删除超级管理员，和其他管理员，他什么都可以。
-
-所以层级是这样：
-
-- 超级管理员
-- 管理员  管理员  
-- 普通用户 普通用户  普通用户  （对项目增删改查权限管控）
+[查看air使用说明](https://github.com/cosmtrek/air)

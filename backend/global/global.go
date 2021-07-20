@@ -59,7 +59,6 @@ func initMysql() {
 	MyDb, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		fmt.Println(err.Error())
-		fmt.Println(dsn)
 		panic("初始化mysql失败")
 	}
 

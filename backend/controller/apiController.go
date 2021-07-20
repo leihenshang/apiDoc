@@ -4,7 +4,6 @@ import (
 	"fastduck/apidoc/request"
 	"fastduck/apidoc/response"
 	"fastduck/apidoc/service"
-	"fmt"
 
 	"github.com/gin-gonic/gin"
 )
@@ -14,13 +13,43 @@ func ApiList(c *gin.Context) {
 	var req request.ApiListRequest
 	err := c.ShouldBindQuery(&req)
 	if err != nil {
-		fmt.Println(err.Error())
+		response.FailWithMessage(err.Error(), c)
 	}
 
 	total, list := service.ApiList(req.ProjectId, req.Page, req.PageSize, req.SortField, req.IsDesc)
 	response.OkWithData(response.ListResponse{Total: total, List: list}, c)
 }
 
-func ApiDetailById(id int64) {
-	
+//ApiDetailById api详情
+func ApiDetailById(c *gin.Context) {
+	var req request.IdRequest
+	err := c.ShouldBindQuery(&req)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+	}
+
+	a := service.ApiDetailById(req.Id)
+	response.OkWithData(a, c)
+}
+
+//ApiDelete 删除api
+func ApiDelete(c *gin.Context) {
+	var req request.IdRequest
+	err := c.ShouldBindJSON(&req)
+	if err != nil {
+		response.FailWithMessage(err.Error(), c)
+	}
+
+	a := service.ApiDetailById(req.Id)
+	response.OkWithData(a, c)
+}
+
+//ApiCreate 创建api
+func ApiCreate(c *gin.Context) {
+
+}
+
+//ApiUpdate 更新api
+func ApiUpdate(c *gin.Context) {
+
 }

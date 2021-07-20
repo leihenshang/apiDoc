@@ -24,8 +24,12 @@ func init() {
 	fmt.Println("初始化配置完成")
 	initLog()
 	fmt.Println("初始化日志完成")
-	initRedis()
-	fmt.Println("初始化redis完成")
+
+	if MyConf.Redis.Enabled {
+		initRedis()
+		fmt.Println("初始化redis完成")
+	}
+
 	initMysql()
 	fmt.Println("初始化mysql完成")
 }

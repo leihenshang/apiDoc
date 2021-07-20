@@ -1,35 +1,34 @@
 # API-DOC
 
+> php 版本因某些原因暂时封存，在v1_php_bak中查看
 ## 概览
-api-doc 是一个简单高效的api接口文档和项目文档记录应用。支持markdown记录项目文档,极大的方便了前后台对于接口文档和项目文档的查看、使用。后端采用PHP编写，前端使用VUE编写。
+api-doc 是一个轻(jian)量(lou)的api接口文档和项目文档记录程序。支持markdown文档,方便了前后端开发人员对于接口文档和项目文档的查看、使用。
 
-## 鸣谢列表
+## 鸣谢
 
 
  <img src="./jetbrains.png" width = "200" height = "218.6" alt="图片名称" align=center />
 
 
-- 感谢 `JetBrains` 提供的免费IDE支持！
-- 相关: [JetBrains网站](https://www.jetbrains.com/?from=apiDoc)
+ 感谢[ JetBrains ](https://www.jetbrains.com/?from=apiDoc)提供的IDE支持！
 
-### 架构
-该项目为前后台分离项目。
-- php7.2(Yii2框架)提供后端能力
-- vue2.0作为前端开发框架
-- mysql5.7 作为数据库
-  
-### 文件夹
-- front 前端文件夹
-- backend 后端文件夹
+### 结构
+该项目为前后台分离项目
+- front 前端
+- backend 后端
 
-这两个文件夹下还各包含一个README.MD，为各自的其他说明。
+这两个文件夹下还各包含一个README.MD，为各自的项目说明。
 
-### 安装方法
+## 技术栈
+  - 后端采用 `golang` 的 `gin` 框架提供接口支持
+  - 前端暂时采用 vue2.0
+  - 数据库继续使用 mysql5.7
+### 运行
 1. 进入front（前端)文件夹,首先执行yarn install安装依赖,接着执行yarn serve
-2. 进入backend（后端)文件夹,执行composer install安装依赖,接着执行php yii serve --port=1000
+2. 进入backend（后端)文件夹,执行 go run main
 
 ### 数据库初始化
-- 在mysql中执行 database/mysql.sql 
+- 在mysql中执行 sql/mysql.sql 
 
 ## 仓库地址
 - github:https://github.com/leihenshang/apiDoc

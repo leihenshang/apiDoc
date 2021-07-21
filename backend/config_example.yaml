@@ -13,7 +13,7 @@ mysql:
     dbName: api-doc
 
 log:
-    path: runtime/log
+    path: runtime/app.log
 
 redis:
     enabled: false

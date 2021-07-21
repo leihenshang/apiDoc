@@ -9,7 +9,6 @@ import (
 	"strconv"
 	"time"
 
-	ginzap "github.com/gin-contrib/zap"
 	"github.com/gin-gonic/gin"
 )
 
@@ -18,6 +17,7 @@ func main() {
 
 	//设置运行模式
 	if global.MyConf.App.IsRelease() {
+		fmt.Println("设置模式为", gin.ReleaseMode)
 		gin.SetMode(gin.ReleaseMode)
 	}
 
@@ -27,7 +27,7 @@ func main() {
 	// r.Use(ginzap.Ginzap(global.MyLogger, time.RFC3339, true))
 
 	//把gin致命错误写入日志
-	r.Use(ginzap.RecoveryWithZap(global.MyLogger, true))
+	// r.Use(ginzap.RecoveryWithZap(global.MyLogger, true))
 
 	//初始化路由
 	route.InitRoute(r)

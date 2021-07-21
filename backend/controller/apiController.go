@@ -1,15 +1,21 @@
 package controller
 
 import (
+	"fastduck/apidoc/global"
 	"fastduck/apidoc/request"
 	"fastduck/apidoc/response"
 	"fastduck/apidoc/service"
 
 	"github.com/gin-gonic/gin"
+	"go.uber.org/zap"
 )
 
 //ApiList api列表
 func ApiList(c *gin.Context) {
+
+	url := "ttttt"
+	global.MyLogger.Sugar().Errorf("test", zap.Any("url", url))
+
 	var req request.ApiListRequest
 	err := c.ShouldBindQuery(&req)
 	if err != nil {

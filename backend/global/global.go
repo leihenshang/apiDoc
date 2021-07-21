@@ -65,7 +65,7 @@ func initMysql() {
 }
 
 func initLog() {
-	MyLogger, _ = zap.NewProduction()
+	initLogger()
 }
 
 func initRedis() {

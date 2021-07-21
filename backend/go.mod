@@ -3,6 +3,7 @@ module fastduck/apidoc
 go 1.16
 
 require (
+	github.com/gin-contrib/zap v0.0.1 // indirect
 	github.com/gin-gonic/gin v1.7.2
 	github.com/go-playground/validator/v10 v10.7.0 // indirect
 	github.com/go-redis/redis v6.15.9+incompatible
